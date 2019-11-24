@@ -1,1 +1,19 @@
+# https://console.developers.google.com/apis/credentials/oauthclient
+# 1. Application type : Web application
+# 2. Name : Your project name
+# 3. Authorized JS origins : This is the origin URI of the client application
+# ex) http://localhost:8080
+# 4. Authorized redirect URIs : 3 + "/login/oauth2/code/google"
+# ex) http://localhost:8080/login/oauth2/code/google
+# 5. Create
+# 6. Check client-id
+# 7. Check client-secret
 
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: # 6
+            client-secret: # 7
