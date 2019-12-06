@@ -8,9 +8,9 @@
   
 # スプリング・ブートのOAuth2チュートリアル
 スプリングセキュリティとoauth2でグーグルのサインイン機能を実装します.  
-グーグル開発者コンソールの認証idを持ってなかったら[application.yml](src/main/resources/application.yml)を参考してください。  
+グーグル開発者コンソールの認証idを持ってなかったら[application.yml](../src/main/resources/application.yml)を参考してください。  
 
-##### [application.yml](src/main/resources/application.yml)通りにやるとクライアントidとクライアントセキュリティsecretsが確認できます。 
+##### [application.yml](../src/main/resources/application.yml)通りにやるとクライアントidとクライアントセキュリティsecretsが確認できます。 
 ![google-console-developer](https://user-images.githubusercontent.com/51474312/70328056-833bcd80-187b-11ea-9734-619c99cd9b3f.PNG)
 
 ## 開発環境  
