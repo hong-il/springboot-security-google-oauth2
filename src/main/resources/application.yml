@@ -8,15 +8,14 @@
 # 5. Create
 # 6. Check client-id
 # 7. Check client-secret
-
 spring:
   security:
     oauth2:
       client:
         registration:
           google:
-            clientId: 696641015780-c42ai4uuvb8ro7905kmiu378alnntr33.apps.googleusercontent.com
-            clientSecret: B5XMyGuwlTAR_KvzTU_zg9rH
+            clientId: # 6
+            clientSecret: # 7
             redirectUriTemplate: "{baseUrl}/login/oauth2/code/{registrationId}"
             scope:
               - email
