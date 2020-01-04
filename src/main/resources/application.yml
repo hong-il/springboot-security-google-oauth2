@@ -8,6 +8,11 @@
 # 5. Create
 # 6. Check client-id
 # 7. Check client-secret
+
+# https://github.com/settings/developers
+# 8. OAuth2 click
+# 9. Check client-id
+# 10. Check client-secret
 spring:
   security:
     oauth2:
@@ -20,3 +25,10 @@ spring:
             scope:
               - email
               - profile
+          github:
+            clientId: # 9
+            clientSecret: # 10
+            redirectUriTemplate: "{baseUrl}/login/oauth2/code/{registrationId}"
+            scope:
+              - user:email
+              - read:user
