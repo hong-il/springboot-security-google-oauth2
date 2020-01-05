@@ -22,6 +22,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .permitAll()
                 .antMatchers("/google").hasAuthority(SocialType.GOOGLE.getRoleType())
                 .antMatchers("/github").hasAnyAuthority(SocialType.GITHUB.getRoleType())
+                .antMatchers("/facebook").hasAnyAuthority(SocialType.FACEBOOK.getRoleType())
                 .anyRequest().authenticated()
                 .and()
                 .oauth2Login()
@@ -53,6 +54,14 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                     .clientId(registration.getClientId())
                     .clientSecret(registration.getClientSecret())
                     .scope("user:email", "read:user")
+                    .build();
+        }
+        if("facebook".equals(client)) {
+            OAuth2ClientProperties.Registration registration = clientProperties.getRegistration().get("facebook");
+            return CommonOAuth2Provider.FACEBOOK.getBuilder(client)
+                    .clientId(registration.getClientId())
+                    .clientSecret(registration.getClientSecret())
+                    .scope("email", "public_profile")
                     .build();
         }
         return null;
